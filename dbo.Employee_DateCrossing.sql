@@ -28,11 +28,11 @@ use testing
 )
 
 select 
-	ID_Employee_1 as КодСотрудника1
-	,v1_DateBegin as НачалоОтпуска
-	,v1_DateEnd as КонецОтпуска
-	,ID_Employee_2 as КодСотрудника2
-	,v2_DateBegin as НачалоОтпуска
-	,v2_DateEnd as КонецОтпуска
+	ID_Employee_1 as РљРѕРґРЎРѕС‚СЂСѓРґРЅРёРєР°1
+	,v1_DateBegin as РќР°С‡Р°Р»РѕРћС‚РїСѓСЃРєР°
+	,v1_DateEnd as РљРѕРЅРµС†РћС‚РїСѓСЃРєР°
+	,ID_Employee_2 as РљРѕРґРЎРѕС‚СЂСѓРґРЅРёРєР°2
+	,v2_DateBegin as РќР°С‡Р°Р»РѕРћС‚РїСѓСЃРєР°
+	,v2_DateEnd as РљРѕРЅРµС†РћС‚РїСѓСЃРєР°
 	
 from table_cte 
