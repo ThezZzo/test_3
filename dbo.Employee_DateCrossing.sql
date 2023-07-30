@@ -1,4 +1,5 @@
-with table_cte(
+use testing
+;with table_cte (
 	ID_Employee_1
 	,v1_DateBegin
 	,v1_DateEnd
@@ -13,10 +14,11 @@ with table_cte(
 			,(select Code from dbo.Employee as e where e.ID = v2.ID_Employee)
 			,v2.DateBegin	
 			,v2.DateEnd
-		from ( dbo.Vacation as v1 
-			inner join dbo.Vacation as v2 on v1.ID_Employee < v2.ID_Employee
+		from (
+			dbo.Vacation as v1 inner join dbo.Vacation as v2 on v1.ID_Employee < v2.ID_Employee
 				and (v1.DateBegin <= v2.DateEnd) 
-				and (v1.DateEnd >= v2.DateBegin)) 
+				and (v1.DateEnd >= v2.DateBegin)
+		) 
 		where v1.ID_Employee IN (
 			select ID_Employee 
 			from dbo.Vacation 
